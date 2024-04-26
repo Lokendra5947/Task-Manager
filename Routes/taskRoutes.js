@@ -6,7 +6,7 @@ const { upload } = require('../helper/multer');
 // const { upload } = require('../helper/multer');
 
 // // Routes for task management
-taskRouter.get('/', verifyToken ,allTask);
+taskRouter.get('/' ,allTask);
 taskRouter.post('/createTask',verifyToken,upload.single("picture") ,taskCreate);
 taskRouter.get('/:id', verifyToken, singleTask);
 taskRouter.put('/update/:id', verifyToken,upload.single("picture"), updateTask);

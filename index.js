@@ -8,6 +8,9 @@ let app = express()
 PORT = 6000
 require("./helper/dbConnection")
 app.use(express.json())
+app.get("/", (req,res)=>{
+    res.send("server is Running")
+    })
 app.use('/user',userRoutes)
 app.use("/task", taskRouter)
 
